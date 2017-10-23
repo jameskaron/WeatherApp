@@ -1,6 +1,7 @@
 package com.james.weatherapp.Util
 
 import com.google.gson.Gson
+import com.james.weatherapp.Data.ForecastResult
 
 /**
  * Created by james on 2017/10/20.
@@ -12,8 +13,8 @@ class ForecastRequest(val zipCode: String) {
         private val COMPLETE_URL = "$URL&APPID=$APP_ID&q="
     }
 
-    fun execute(): ForecastRequest{
+    fun execute(): ForecastResult {
         val forecastJsonStr = java.net.URL(COMPLETE_URL + zipCode).readText()
-        return Gson().fromJson(forecastJsonStr,ForecastRequest::class.java)
+        return Gson().fromJson(forecastJsonStr,ForecastResult::class.java)
     }
 }
