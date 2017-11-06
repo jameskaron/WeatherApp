@@ -1,7 +1,7 @@
 package com.james.weatherapp.Util
 
 import com.google.gson.Gson
-import com.james.weatherapp.Data.ForecastResult
+import com.james.weatherapp.ResponseData.ForecastResult
 
 /**
  * Created by james on 2017/10/20.

@@ -1,4 +1,4 @@
-package com.james.weatherapp.Data
+package com.james.weatherapp.ResponseData
 
 /**
  * Created by james on 2017/10/19.
