@@ -4,6 +4,7 @@ package com.james.weatherapp.ResponseData
  * Created by james on 2017/10/19.
  */
 
+////use for receiving url json
 data class ForecastResult(val city: City, val list: List<Forecast>)
 
 data class City(val id: Long, val name: String, val coord: Coordinates, val country: String, val population: Int)
