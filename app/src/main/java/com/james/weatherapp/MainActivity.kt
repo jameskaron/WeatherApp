@@ -6,11 +6,9 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.james.weatherapp.Adapter.ForecastListAdapter
 import com.james.weatherapp.Util.Request
+import com.james.weatherapp.domain.Forecast
 import com.james.weatherapp.domain.RequestForecastCommand
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.find
-import org.jetbrains.anko.longToast
-import org.jetbrains.anko.uiThread
+import org.jetbrains.anko.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +32,9 @@ class MainActivity : AppCompatActivity() {
         doAsync {
             val result = RequestForecastCommand("94043").execute()
             uiThread {
-                forecastList.adapter = ForecastListAdapter(result)
+                forecastList.adapter = ForecastListAdapter(result,object: ForecastListAdapter.OnItemClickListener{
+                        toast(forecast.date)
+                }
             }
         }
 
