@@ -17,7 +17,7 @@ import org.jetbrains.anko.find
 /**
  * Created by james on 2017/9/30.
  */
-class ForecastListAdapter (val weekForecast : ForecastList, val itemClick: OnItemClickListener) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>(){
+class ForecastListAdapter (val weekForecast : ForecastList, val itemClick: (Forecast)->Unit ) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder? {
         val view = LayoutInflater.from(parent.ctx).inflate(R.layout.item_forecast,parent,false)
@@ -29,7 +29,7 @@ class ForecastListAdapter (val weekForecast : ForecastList, val itemClick: OnIte
 
     override fun getItemCount(): Int = weekForecast.size()
 
-    class ViewHolder(view: View, val itemClick: OnItemClickListener) : RecyclerView.ViewHolder(view){
+    class ViewHolder(view: View, val itemClick: (Forecast)->Unit) : RecyclerView.ViewHolder(view){
         private val iconView: ImageView
         private val dateView: TextView
         private val descriptionView: TextView
@@ -55,7 +55,7 @@ class ForecastListAdapter (val weekForecast : ForecastList, val itemClick: OnIte
         }
     }
 
-    public interface OnItemClickListener{
-        operator fun invoke(forecast: Forecast)
-    }
+//    public interface OnItemClickListener{
+//        operator fun invoke(forecast: Forecast)
+//    }
 }
