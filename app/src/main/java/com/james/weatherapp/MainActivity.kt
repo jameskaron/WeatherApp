@@ -9,6 +9,7 @@ import com.james.weatherapp.Util.Request
 import com.james.weatherapp.domain.Forecast
 import com.james.weatherapp.domain.RequestForecastCommand
 import org.jetbrains.anko.*
+import kotlinx.android.synthetic.main.activity_main.*;
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val forecastList : RecyclerView = find(R.id.forecast_list)
         forecastList.layoutManager = LinearLayoutManager(this)
 
         doAsync {
