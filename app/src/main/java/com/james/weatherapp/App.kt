@@ -9,7 +9,7 @@ import kotlin.properties.Delegates
  */
 class App : Application() {
     companion object {
-         var instance : Application by Delegates.notNull()
+         var instance : Application by DelegatesExt.notNullSingleValue()
     }
     override fun onCreate() {
         super.onCreate()
