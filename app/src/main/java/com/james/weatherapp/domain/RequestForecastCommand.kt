@@ -1,6 +1,8 @@
 package com.james.weatherapp.domain
 
 import com.james.weatherapp.Util.ForecastRequest
+import com.james.weatherapp.domain.model.Command
+import com.james.weatherapp.domain.model.ForecastList
 
 /**
  * Created by 80575749 on 2017/10/23.

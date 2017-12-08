@@ -1,4 +1,4 @@
-package com.james.weatherapp.`object`
+package com.james.weatherapp.domain.model
 
 /**
  * Created by 80575749 on 2017/11/29.

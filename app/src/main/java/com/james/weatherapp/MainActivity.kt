@@ -3,10 +3,7 @@ package com.james.weatherapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import com.james.weatherapp.Adapter.ForecastListAdapter
-import com.james.weatherapp.Util.Request
-import com.james.weatherapp.domain.Forecast
 import com.james.weatherapp.domain.RequestForecastCommand
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.activity_main.*;
