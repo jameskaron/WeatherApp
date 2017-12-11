@@ -2,10 +2,8 @@ package com.james.weatherapp.dao
 
 import com.james.weatherapp.R
 import com.james.weatherapp.R.id.date
-import com.james.weatherapp.domain.model.CityForecast
-import com.james.weatherapp.domain.model.CityForecastTable
-import com.james.weatherapp.domain.model.DayForecast
-import com.james.weatherapp.domain.model.DayForecastTable
+import com.james.weatherapp.domain.model.*
+import com.james.weatherapp.extensions.clear
 import com.james.weatherapp.extensions.parseList
 import com.james.weatherapp.extensions.parseOpt
 import kotlinx.coroutines.experimental.selects.select
@@ -32,5 +30,9 @@ class ForecastDb(val forecastDbHelper: ForecastDbHelper = ForecastDbHelper.insta
         if (city != null) dataMapper.convertToDomain(city) else null
     }
 
+    fun saveForecast(forecast: ForecastList) = forecastDbHelper.use {
+        clear(CityForecastTable.NAME)
+        clear(DayForecastTable.NAME)
+    }
 
 }

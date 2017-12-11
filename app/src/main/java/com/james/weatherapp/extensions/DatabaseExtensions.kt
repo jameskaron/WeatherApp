@@ -1,5 +1,6 @@
 package com.james.weatherapp.extensions
 
+import android.database.sqlite.SQLiteDatabase
 import org.jetbrains.anko.db.MapRowParser
 import org.jetbrains.anko.db.SelectQueryBuilder
 
@@ -16,3 +17,6 @@ fun <T : Any> SelectQueryBuilder.parseOpt(
             override fun parseRow(columns: Map<String, Any?>): T = parser(columns)
         })
 
+fun SQLiteDatabase.clear(tableName: String) {
+    execSQL("delete from $tableName")
+}
