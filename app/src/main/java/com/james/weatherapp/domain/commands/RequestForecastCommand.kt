@@ -1,6 +1,7 @@
-package com.james.weatherapp.domain
+package com.james.weatherapp.domain.commands
 
-import com.james.weatherapp.Util.ForecastRequest
+import com.james.weatherapp.data.server.ForecastRequest
+import com.james.weatherapp.domain.ForecastDataMapper
 import com.james.weatherapp.domain.model.Command
 import com.james.weatherapp.domain.model.ForecastList
 

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.james.weatherapp.R
-import com.james.weatherapp.Util.ctx
+import com.james.weatherapp.extensions.ctx
 import com.james.weatherapp.domain.model.Forecast
 import com.james.weatherapp.domain.model.ForecastList
 import com.squareup.picasso.Picasso

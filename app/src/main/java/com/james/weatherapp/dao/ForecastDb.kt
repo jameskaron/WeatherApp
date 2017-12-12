@@ -6,9 +6,11 @@ import com.james.weatherapp.domain.model.*
 import com.james.weatherapp.extensions.clear
 import com.james.weatherapp.extensions.parseList
 import com.james.weatherapp.extensions.parseOpt
+import com.james.weatherapp.extensions.toVarargArray
 import kotlinx.coroutines.experimental.selects.select
 import org.jetbrains.anko.db.MapRowParser
 import org.jetbrains.anko.db.SelectQueryBuilder
+import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 
 /**
@@ -33,6 +35,13 @@ class ForecastDb(val forecastDbHelper: ForecastDbHelper = ForecastDbHelper.insta
     fun saveForecast(forecast: ForecastList) = forecastDbHelper.use {
         clear(CityForecastTable.NAME)
         clear(DayForecastTable.NAME)
+
+        with(dataMapper.convertFromDomain(forecast)) {
+            insert(CityForecastTable.NAME, *map.toVarargArray())
+            dailyForecast.forEach {
+                insert(DayForecastTable.NAME, *it.map.toVarargArray())
+            }
+        }
     }
 
 }

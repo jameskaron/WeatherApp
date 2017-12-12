@@ -1,4 +1,4 @@
-package com.james.weatherapp.Util
+package com.james.weatherapp.extensions
 
 import android.content.Context
 import android.view.View
