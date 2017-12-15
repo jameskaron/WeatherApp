@@ -1,9 +1,8 @@
-package com.james.weatherapp.domain
+package com.james.weatherapp.data.server
 
 import com.james.weatherapp.ResponseData.Forecast
 import com.james.weatherapp.ResponseData.ForecastResult
 import com.james.weatherapp.domain.model.ForecastList
-import java.text.DateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import com.james.weatherapp.domain.model.Forecast as ModelForecast
@@ -11,7 +10,7 @@ import com.james.weatherapp.domain.model.Forecast as ModelForecast
 /**
  * Created by 80575749 on 2017/10/23.
  */
-class ForecastDataMapper {
+class ServerDataMapper {
 
     fun convertToDomain(zipCode: Long, forecast: ForecastResult) = with(forecast) {
         ForecastList(zipCode, city.name, city.country, convertForecastListToDomain(list))

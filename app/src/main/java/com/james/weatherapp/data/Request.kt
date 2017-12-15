@@ -1,4 +1,4 @@
-package com.james.weatherapp.data.server
+package com.james.weatherapp.data
 
 import android.util.Log
 import java.net.URL
