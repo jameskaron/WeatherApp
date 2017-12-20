@@ -1,8 +1,6 @@
-package com.james.weatherapp
+package com.james.weatherapp.Util
 
 import android.app.Application
-import android.database.sqlite.SQLiteOpenHelper
-import kotlin.properties.Delegates
 
 /**
  * Created by 80575749 on 2017/11/20.

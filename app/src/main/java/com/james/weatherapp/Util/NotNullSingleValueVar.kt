@@ -1,4 +1,4 @@
-package com.james.weatherapp
+package com.james.weatherapp.Util
 
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty

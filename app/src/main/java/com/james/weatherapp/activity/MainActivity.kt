@@ -1,9 +1,10 @@
-package com.james.weatherapp
+package com.james.weatherapp.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.james.weatherapp.Adapter.ForecastListAdapter
+import com.james.weatherapp.R
 import com.james.weatherapp.domain.commands.RequestForecastCommand
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.activity_main.*;

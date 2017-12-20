@@ -2,7 +2,7 @@ package com.james.weatherapp.dao
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import com.james.weatherapp.App
+import com.james.weatherapp.Util.App
 import com.james.weatherapp.domain.model.CityForecastTable
 import com.james.weatherapp.domain.model.DayForecastTable
 import org.jetbrains.anko.db.*
