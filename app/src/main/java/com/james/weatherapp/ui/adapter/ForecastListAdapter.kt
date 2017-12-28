@@ -1,4 +1,4 @@
-package com.james.weatherapp.Adapter
+package com.james.weatherapp.ui.ui.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

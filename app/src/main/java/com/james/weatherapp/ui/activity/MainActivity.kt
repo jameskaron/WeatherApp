@@ -1,11 +1,12 @@
-package com.james.weatherapp.activity
+package com.james.weatherapp.ui.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.james.weatherapp.Adapter.ForecastListAdapter
 import com.james.weatherapp.R
+import com.james.weatherapp.ui.ui.adapter.ForecastListAdapter
 import com.james.weatherapp.domain.commands.RequestForecastCommand
+import com.james.weatherapp.domain.model.ForecastList
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.activity_main.*;
 
@@ -35,5 +36,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun updateUI(weekForecast: ForecastList){
+        val adapt = ForecastListAdapter(weekForecast){
+            startActivity<DetailActivity>(DetailActivity.ID to it.id, DetailActivity.CITY_NAME to weekForecast.city)
+        }
+        forecastList.adapter = adapt
+        //TODO
     }
 }

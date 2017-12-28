@@ -1,4 +1,4 @@
-package com.james.weatherapp.activity
+package com.james.weatherapp.ui.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.TextView
 import com.james.weatherapp.R
 import com.james.weatherapp.domain.commands.RequestDayForecastCommand
 import com.james.weatherapp.domain.model.Forecast
+import com.james.weatherapp.extensions.color
 import com.james.weatherapp.extensions.toDateString
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
